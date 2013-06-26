@@ -1,4 +1,4 @@
-(function(InboxClient, M) {
+(function(InboxClient, M, B) {
 
   var app, layout, router, controller;
 
@@ -7,10 +7,18 @@
 
   controller = {
     "showInbox": function() {
-      layout.showContent(new InboxClient.views.InboxScreen());
+      InboxClient.service.getMail(null, function(a) {
+        layout.showContent(new InboxClient.views.Emails({
+          "collection": new B.Collection(a)
+        }));
+      });
     },
     "showTrash": function() {
-      layout.showContent(new InboxClient.views.TrashScreen());
+      InboxClient.service.getTrash(null, function(a) {
+        layout.showContent(new InboxClient.views.Emails({
+          "collection": new B.Collection(a)
+        }));
+      });
     }
   };
 
@@ -32,4 +40,4 @@
 
   InboxClient.app = app;
 
-}(window.InboxClient, Backbone.Marionette))
+}(window.InboxClient, Backbone.Marionette, Backbone));

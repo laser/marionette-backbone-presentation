@@ -1,0 +1,49 @@
+#main {
+  font-family: monospace;
+  margin: 10px auto 0;
+  width: 800px;
+}
+
+#main > .content {
+    border: 1px solid #50729F;
+    box-sizing: content-box;
+    overflow: auto;
+    padding: 10px;
+}
+
+#main > .content .sidebar {
+  background-color: lightblue;
+  float: left;
+  padding: 5px;
+  width: 190px;
+}
+
+#main > .content .sidebar ul.operations {
+  margin: 0;
+  padding: 0;
+}
+
+#main > .content .sidebar ul.operations li {
+  background-color: #D8D8D8;
+  list-style: none;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+#main > .content table {
+  background-color: #C6E2FF;
+  border-collapse: separate;
+  border-spacing: 5px;
+  float: right;
+  padding: 5px;
+  position: relative;
+  width: 570px;
+}
+
+#main > .content table thead tr th {
+  text-align: left;
+}
+
+#main > .content table tbody tr td {
+  background-color: #B0E0E6;
+}

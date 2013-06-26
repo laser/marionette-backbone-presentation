@@ -1,18 +1,6 @@
 (function(InboxClient, M, B) {
 
-  InboxClient.views.OperationLink = M.CompositeView.extend({
-    "tagName": "li",
-    "template": (function() {
-      var t;
-
-      t = '<a href="{{href}}">{{label}}</a>';
-
-      return t;
-    }())
-  });
-
-  InboxClient.views.Sidebar = M.CompositeView.extend({
-    "className": "sidebar",
+  InboxClient.views.ScreenLinks = M.CompositeView.extend({
     "initialize": function() {
       this.collection = new B.Collection([{
         "href": "#inbox",
@@ -22,13 +10,12 @@
         "label": "Trash"
       }]);
     },
-    "itemView": InboxClient.views.OperationLink,
+    "itemView": InboxClient.views.ScreenLink,
     "itemViewContainer": ".operations",
     "template": (function() {
       var t;
 
       t  = '';
-      t += '<header>Go To:</header>';
       t += '<ul class="operations"></ul>';
 
       return t;
