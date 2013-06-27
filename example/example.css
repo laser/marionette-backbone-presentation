@@ -5,17 +5,31 @@
 }
 
 #main > .content {
-    border: 1px solid #50729F;
-    box-sizing: content-box;
-    overflow: auto;
-    padding: 10px;
+  border: 1px solid #191970;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 10px;
+}
+
+#main > .content > header {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
 }
 
 #main > .content .sidebar {
-  background-color: lightblue;
+  background-color: #f984e5;
   float: left;
   padding: 5px;
   width: 190px;
+}
+
+#main > .content .sidebar input {
+  border: 1px solid #002fa7;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2px;
+  width: 100%;
 }
 
 #main > .content .sidebar ul.operations {
@@ -24,26 +38,32 @@
 }
 
 #main > .content .sidebar ul.operations li {
-  background-color: #D8D8D8;
+  background-color: #ff91af;
   list-style: none;
   margin: 0 0 5px 0;
   padding: 0;
 }
 
+#main > .content .sidebar ul.operations li a {
+  color: #002fa7;
+}
+
 #main > .content table {
-  background-color: #C6E2FF;
+  background-color: #556b2f;
   border-collapse: separate;
   border-spacing: 5px;
   float: right;
   padding: 5px;
   position: relative;
+  table-layout: fixed;
   width: 570px;
 }
 
 #main > .content table thead tr th {
+  color: white;
   text-align: left;
 }
 
 #main > .content table tbody tr td {
-  background-color: #B0E0E6;
+  background-color: #9dcc7a;
 }

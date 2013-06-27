@@ -11,17 +11,21 @@
     "itemViewContainer": "tbody",
     "tagName": "table",
     "template": (function() {
-      return '\
-      <table>\
-        <thead>\
-          <tr>\
-            <th>Subject</th>\
-            <th>Email</th>\
-            <th>Preview</th>\
-          </tr>\
-        </thead>\
-        <tbody></tbody>\
-      </table>';
+      var t;
+
+      t  = '';
+      t += '<table>';
+      t += '  <thead>'
+      t += '    <tr>'
+      t += '      <th>Subject</th>'
+      t += '      <th>Email</th>'
+      t += '      <th>Preview</th>'
+      t += '    </tr>'
+      t += '  </thead>'
+      t += '  <tbody></tbody>'
+      t += '</table>';
+
+      return t;
     }()),
     "_onSearchRequested": function(search) {
       search = search.toLowerCase();
@@ -29,6 +33,7 @@
       this.collection.reset(_.filter(this._original, function(o) {
         return o.body.toLowerCase().indexOf(search) > -1
           || o.subject.toLowerCase().indexOf(search) > -1
+          || o.from.toLowerCase().indexOf(search) > -1
       }));
     }
   });

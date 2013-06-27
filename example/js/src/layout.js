@@ -16,6 +16,7 @@
       var t;
 
       t  = '';
+      t += '<header>Your Inbox</header>';
       t += '<section data-region="navigation"></section>';
       t += '<section data-region="content"></section>';
 
